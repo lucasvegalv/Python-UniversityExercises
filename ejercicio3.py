@@ -1,18 +1,17 @@
-import random_nums_2
+from ejercicio2 import random_generator
 
 def calcSum():
 
-  arr = random_nums_2.randomNums(1, 5, 5)
-
-  arrLength = len(arr)
+  arr = random_generator(1, 5, 5)
   total = 0
 
-  for i in range(arrLength):
+  for i in range(len(arr)):
     total += arr[i]
-    print(total)
 
+  print("El array generado es: ", arr)
   print("El total es: ", total) 
 
+calcSum()
 """
 Explanation: 
 

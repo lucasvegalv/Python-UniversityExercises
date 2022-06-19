@@ -1,6 +1,6 @@
 import random 
 
-def randomNums(a, b, c):
+def random_generator(a, b, c):
   randomArr = []
 
   for x in range(c):
@@ -8,6 +8,7 @@ def randomNums(a, b, c):
     randomArr.append(num)
 
   return(randomArr)
+  print(randomArr)
 
 """
 Explanation:

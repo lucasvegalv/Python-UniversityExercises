@@ -64,7 +64,7 @@ def bubble_sort_2(arr):
   return arr
 
 """
-1) An improvement to the Bubble Sort algorithm can be reducing the number of iterations. How can we do it? Well, if we see what the algorithm does, we can see that each iteration push the greater number of the list to the end. So... in the first iteration we have one ordered element at the end, in the second one we have two, in the third one three, and so on and so on. See? We have 'i' ordered elements after each iteration
+1) An improvement to the Bubble Sort algorithm can be reducing the number of iterations. How can we do it? Well, if we see what the algorithm does, we can see that each iteration pushes the greater number of the list to the end. So... in the first iteration we have one ordered element at the end, in the second one we have two, in the third one three, and so on and so on. See? We have 'i' ordered elements after each iteration
 2) Knowing this, we could exclude that elements that are 'already ordered' of the iteration and comparisons. In order to do this, we would have something like 'Bubble Sort 2.0' (code below)
 3) Check line 63, we modify the range. Now, after each iteration, we reduce by 'i' the range of the loop so we exclude the last element (already ordered) and we don't make unnecessary comparisons.
 """
@@ -100,6 +100,8 @@ print(bubble_sort_3(array))
 """
 
 # Insertion Sort
+def insertion_sort():
+  
 
 
 

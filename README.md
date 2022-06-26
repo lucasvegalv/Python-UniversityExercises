@@ -22,8 +22,4 @@ Also, I explained what I did and think in each exercise. The explanations are at
 
 8) Escribir una función para devolver la posición que ocupa un valor pasado como parámetro, utilizando búsqueda secuencial en una lista desordenada. La función debe devolver -1 si el elemento no se encuentra en la lista.
 
-9) Crear tres listas y ordenarlas en forma ascendente utilizando un método para cada lista: métodos de selección, inserción y burbujeo. ¿Qué cambia para ordenar en forma descendente?
-
-10) Utilizando búsqueda binaria sobre una lista ordenada realizar la búsqueda de valores e informar si se encuentran o no en la lista, finalizar las búsquedas con -1 e informar cuantas búsquedas fueron exitosas y en cuantas no se encontró el valor buscado.
-
-11) Crear una lista de N números generados al azar entre 0 y 100 pero sin elementos repetidos. Validar que N sea menor o igual a 100.
+9) Crear tres listas y ordenarlas en forma ascendente utilizando un método para cada lista: métodos de selección y burbujeo. ¿Qué cambia para ordenar en forma descendente?

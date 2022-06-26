@@ -1,20 +1,20 @@
+array = [1, 2]
 def search(arr, wanted):
 
   index = 0
-  isFounded = False
+  wasFounded = False
 
-  while index < len(arr) and not isFounded:
-    if(arr[index] == wanted):
-      isFounded = True
-      return f"The value was founded in the {index + 1}º position"
+  while(index < len(arr) and not wasFounded):
+    if(wanted == arr[index]):
+      wasFounded = True
+      return (f"The element '{wanted}' was founded in the {index}º position")
     else:
       index += 1
-    
-    if(index == len(arr) and isFounded == False):
-      return -1      
-  return(isFounded, index)
 
-exampleArr = [2, 4, 6, 10, 1, 100, 50, 23, 40]
+    if(index == len(arr) and not wasFounded):
+      return -1
+      
+print(search(array, 3))
 
 """
 Explanation:

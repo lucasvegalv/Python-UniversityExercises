@@ -1,32 +1,33 @@
-array = [5, 2, 10, 8, 7, 1, 3, 6, 9, 4]
+array = [5, 2, 10, 8, 25, 4, 30, 18, 9, 11, 15, 6, 1]
 
 # Selection Sort
 def selection_sort(arr):
   
   length = len(arr)
+  comp = 0
+  changes = 0
 
   for i in range (length - 1):
-    minor = i
 
     for j in range(i + 1, length):
-      if(arr[j] < arr[minor]):
-        minor = j
+      if(arr[j] < arr[i]):
+        arr[i], arr[j] = arr[j], arr[i]
+        changes += 1
+        comp += 1
+      else: 
+        comp += 1
 
-    aux = arr[minor]
-    arr[minor] = arr[i]
-    arr[i] = aux
+  return (f"The ordered array is {arr}, after we made {comp} comparisons and {changes} changes")
 
-  return arr
 
 """
 Explanation: 
 
 1) In a function, which receives an array as argument, we use a 'For Loop' to iterate through the array. The first loop iterates from the first element to the penultimate. 
-2) In order to be able to compare the elements, we will store the first element's position in a variable called 'minor' (because until we find an element less than it, the first one is the minor)
-3) Then, we hav to iterate the array again but this time we it goes from the 'i + 1' position (always one more than the first iteration) to the last element of the list. 
-4) Now that we have an element and the next one, we can compare each other. We do this using an 'If else' statement where we check if the elements in the 'j' position (second iteration) are less than the element in the 'i' position (the first iteration).
-5) In each iteration (the second one) we make the conditional statement. If that check is True, we will make change between the elements. We will want to move the arr[j] element to the 'i' position, and the arr[i] element to the 'j' position. That's what we do in line 13º, where the 'minor' variable is 'j' now.
-6) Now that we change the minor position value, the last step is to exchange the values. In order to do this, we need an aux/temporary variable to store one of the two values (this is because once we replace its value, we lose it. But we want to use that value later, so we have to store it). 
+2) Then, we hav to iterate the array again but this time we it goes from the 'i + 1' position (always one more than the first iteration) to the last element of the list. 
+3) Now that we have an element and the next one, we can compare the first element with the rest of the array. We do this using an 'If else' statement where we check if some element in the 'j' position (second iteration) is less than the element in the 'i' position (the first iteration).
+4) If that check is 'True', we exchange the elements. We will want to move the arr[j] element to the 'i' position, and the arr[i] element to the 'j' position. That's what we do in line 14º, where with a multiple assignment we can exchange values without an aux/temporary variable.
+5) We will repeat this operation as many times as the length of the array is.
 """
 
 # Bubble Sort
@@ -40,7 +41,6 @@ def bubble_sort(arr):
         arr[j], arr[j + 1] = arr[j + 1], arr[j]
       
   return arr
-    
 """
 Explanation:
 
@@ -90,19 +90,9 @@ def bubble_sort_3(arr):
     i += 1
 
   return arr
-  
-print(bubble_sort_3(array))
 
 """
 1) Another improvement also can be to stop iterating once we ordered all the list. But, how can we know when it is completely ordered? Well, we can detect values' and positions' changes.
 2) In order to do this, we will make a validation to enter to the main loop. The condition is that there were changes in the last iteration.
 3) We do this conditional statement with a 'While', so the loop will start if and only if the array changed during the last iteration. With this two changes, we have a Bubble Sort algorithm a little bit more efficient :)
 """
-
-# Insertion Sort
-def insertion_sort():
-  
-
-
-
-
